@@ -7,4 +7,16 @@ body,
   height: 100%;
 }
 
+#edges {
+  background-color: #fff;
+  width: 250px;
+  height: 150px;
+}
+#edges .edge-list {
+  list-style-type: none;
+}
+#edges .edge-list label {
+  display: inline-block;
+}
+
 /*# sourceMappingURL=app/src/css/Main.css.map */
