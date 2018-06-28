@@ -25,6 +25,20 @@ module.exports = function (grunt) {
                     'app/src/js/dojo.min.js': 'app/src/js/dojo.js'
                 }
             }
+        },
+        watch: {
+            scripts: {
+                files: ['app/src/js/Main.js', 'app/src/dojo.js'],
+                tasks: ['uglify']
+            },
+            sass: {
+                files: ['app/src/css/Main.scss'],
+                tasks: ['sass']
+            },
+            styles: {
+                files: ['app/src/css/Main.css'],
+                tasks: ['cssmin']
+            }
         }
     });
 
@@ -32,7 +46,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify-es');
     grunt.loadNpmTasks('grunt-contrib-watch');
-
-    grunt.registerTask('default', ['sass', 'cssmin', 'uglify']);
+    grunt.registerTask('default', ['sass', 'cssmin', 'uglify', 'watch']);
 
 }
