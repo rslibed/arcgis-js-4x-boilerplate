@@ -1,0 +1,1 @@
+{"version":3,"file":"PortalInfoViewModel.js","sourceRoot":"","sources":["PortalInfoViewModel.ts"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;IAOA;QAAkC,uCAAkB;QAApD;;QAAsD,CAAC;QAAjD,mBAAmB;YADxB,qBAAQ,CAAC,qBAAqB,CAAC;WAC1B,mBAAmB,CAA8B;QAAD,0BAAC;KAAA,AAAvD,CAAkC,qBAAQ,CAAC,QAAQ,CAAC,GAAG;IAEvD,OAAS,mBAAmB,CAAC"}
