@@ -80,7 +80,33 @@ define(["require", "exports", "esri/core/tsSupport/declareExtendsHelper", "esri/
             //  viewModel
             //
             //----------------------------------
-            _this.viewModel = new CustomSketchViewModel();
+            _this.viewModel = new CustomSketchViewModel({
+                pointSymbol: {
+                    type: "simple-marker",
+                    style: "square",
+                    color: "red",
+                    size: "16px",
+                    outline: {
+                        color: [255, 255, 0],
+                        width: 3
+                    }
+                },
+                polylineSymbol: {
+                    type: "simple-line",
+                    color: "#8A2BE2",
+                    width: "4",
+                    style: "dash"
+                },
+                polygonSymbol: {
+                    type: "simple-fill",
+                    color: "rgba(138,43,226, 0.8)",
+                    style: "solid",
+                    outline: {
+                        color: "white",
+                        width: 1
+                    }
+                }
+            });
             return _this;
         }
         //----------------------------------
