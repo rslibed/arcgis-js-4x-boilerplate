@@ -13,10 +13,10 @@ window["dojoConfig"] = {
     {
       name: "app",
       location: locationPath + "app"
+    },
+    {
+      name: "resources",
+      location: "../../SketchWidget/Sketch/nls/resources"
     }
-    // {
-    //   name: "resources",
-    //   location: "../app/Share/nls/resources"
-    // }
   ]
 };

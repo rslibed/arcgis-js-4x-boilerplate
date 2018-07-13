@@ -1,34 +1,19 @@
 require([
     "esri/WebMap",
     "esri/views/MapView",
-    "esri/widgets/Legend",
     "esri/widgets/Expand",
-    "esri/widgets/Search",
-    "app/Sketch/SketchWidget",
+    "app/SketchWidget/SketchWidget",
     "esri/layers/GraphicsLayer",
     "dojo/domReady!"
-], function (WebMap, MapView, Legend, Expand, Search, SketchWidget, GraphicsLayer) {
+], function (Map, MapView, Expand, SketchWidget, GraphicsLayer) {
     var graphicsLayer = new GraphicsLayer();
-    var webmap = new WebMap({
-        portalItem: {
-            id: "1354d582ae87490dbb3fbaf4010e58f6"
-        },
+    var map = new Map({
+        basemap: "streets",
         layers: [graphicsLayer]
     });
     var view = new MapView({
-        map: webmap,
+        map: map,
         container: "viewDiv"
-    });
-    var legend = new Legend({
-        view: view
-    });
-    var legendNode = document.createElement("div");
-    var legendExpand = new Expand({
-        container: legendNode,
-        content: legend
-    });
-    var search = new Search({
-        view: view
     });
     var sketchContainer = document.createElement("div");
     var sketch = new SketchWidget({
@@ -36,7 +21,12 @@ require([
         view: view,
         layer: graphicsLayer
     });
-    var group = [sketch, legendExpand];
-    view.ui.add(group, "top-right");
+    var sketchNode = document.createElement("div");
+    var sketchExpand = new Expand({
+        container: sketchNode,
+        content: sketch,
+        expanded: true
+    });
+    view.ui.add(sketchExpand, "top-right");
 });
 //# sourceMappingURL=Main.js.map

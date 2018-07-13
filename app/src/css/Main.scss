@@ -11,16 +11,21 @@ body,
     background-color: #fff;
     color: #949494;
     width: 250px;
-    padding: 1% 4%;
-    .esri-sketch__header {
-        font-size: 18px;
+    .esri-sketch__header-container {
+        width: 100%;
+        .esri-sketch__header {
+            font-size: 18px;
+            position: relative;
+            top: 5px;
+            left: 10px;
+        }
     }
     .esri-sketch__hr {
         margin: 0;
     }
-    .esri-sketch__base {
+    .esri-sketch__sketch-item-container {
         width: 100%;
-        padding-left: 0;
+        padding: 5% 0;
         .esri-sketch__sketch-item {
             display: inline-block;
             width: 25%;

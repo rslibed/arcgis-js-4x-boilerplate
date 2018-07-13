@@ -1,42 +1,19 @@
 require([
   "esri/WebMap",
   "esri/views/MapView",
-  "esri/widgets/Legend",
   "esri/widgets/Expand",
-  "esri/widgets/Search",
-  "app/Sketch/SketchWidget",
+  "app/SketchWidget/SketchWidget",
   "esri/layers/GraphicsLayer", // Be sure to point directly to JS file
   "dojo/domReady!"
-], function(
-  WebMap,
-  MapView,
-  Legend,
-  Expand,
-  Search,
-  SketchWidget,
-  GraphicsLayer
-) {
+], function(Map, MapView, Expand, SketchWidget, GraphicsLayer) {
   const graphicsLayer = new GraphicsLayer();
-  const webmap = new WebMap({
-    portalItem: {
-      id: "1354d582ae87490dbb3fbaf4010e58f6"
-    },
+  const map = new Map({
+    basemap: "streets",
     layers: [graphicsLayer]
   });
   const view = new MapView({
-    map: webmap,
+    map: map,
     container: "viewDiv"
-  });
-  const legend = new Legend({
-    view
-  });
-  const legendNode = document.createElement("div");
-  const legendExpand = new Expand({
-    container: legendNode,
-    content: legend
-  });
-  const search = new Search({
-    view
   });
   const sketchContainer = document.createElement("div");
   const sketch = new SketchWidget({
@@ -44,6 +21,11 @@ require([
     view,
     layer: graphicsLayer
   });
-  const group = [sketch, legendExpand];
-  view.ui.add(group, "top-right");
+  const sketchNode = document.createElement("div");
+  const sketchExpand = new Expand({
+    container: sketchNode,
+    content: sketch,
+    expanded: true
+  });
+  view.ui.add(sketchExpand, "top-right");
 });

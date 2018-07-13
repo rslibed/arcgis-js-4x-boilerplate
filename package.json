@@ -10,6 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "@types/arcgis-js-api": "^4.7.0",
+    "@dojo/core": "^2.0.0",
+    "@dojo/has": "^2.0.0",
+    "@dojo/i18n": "^2.0.0",
+    "@dojo/shim": "^2.0.0",
     "dojo-typings": "^1.11.9",
     "eslint": "^5.0.1",
     "grunt": "^1.0.3",

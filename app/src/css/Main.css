@@ -11,24 +11,29 @@ body,
   background-color: #fff;
   color: #949494;
   width: 250px;
-  padding: 1% 4%;
 }
-.esri-sketch .esri-sketch__header {
+.esri-sketch .esri-sketch__header-container {
+  width: 100%;
+}
+.esri-sketch .esri-sketch__header-container .esri-sketch__header {
   font-size: 18px;
+  position: relative;
+  top: 5px;
+  left: 10px;
 }
 .esri-sketch .esri-sketch__hr {
   margin: 0;
 }
-.esri-sketch .esri-sketch__base {
+.esri-sketch .esri-sketch__sketch-item-container {
   width: 100%;
-  padding-left: 0;
+  padding: 5% 0;
 }
-.esri-sketch .esri-sketch__base .esri-sketch__sketch-item {
+.esri-sketch .esri-sketch__sketch-item-container .esri-sketch__sketch-item {
   display: inline-block;
   width: 25%;
   text-align: center;
 }
-.esri-sketch .esri-sketch__base .esri-sketch__sketch-item .esri-sketch__icon-container {
+.esri-sketch .esri-sketch__sketch-item-container .esri-sketch__sketch-item .esri-sketch__icon-container {
   width: 50%;
   margin: 0 auto;
   padding: 1%;
@@ -38,10 +43,10 @@ body,
   transition-timing-function: linear;
   transition-delay: initial;
 }
-.esri-sketch .esri-sketch__base .esri-sketch__sketch-item .esri-sketch__icon-container .esri-sketch__esri-icon {
+.esri-sketch .esri-sketch__sketch-item-container .esri-sketch__sketch-item .esri-sketch__icon-container .esri-sketch__esri-icon {
   font-size: 25px;
 }
-.esri-sketch .esri-sketch__base .esri-sketch__sketch-item .esri-sketch__icon-container:hover {
+.esri-sketch .esri-sketch__sketch-item-container .esri-sketch__sketch-item .esri-sketch__icon-container:hover {
   color: #fff;
   background-color: #949494;
   cursor: pointer;
