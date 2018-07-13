@@ -21,6 +21,6 @@
         "./node_modules/dojo-typings/dojox/1.11/index.d.ts",
         "./node_modules/dojo-typings/dojox/1.11/modules.d.ts"
     ],
-    "include": ["./app/**/js/*"],
+    "include": ["./app/**/js/*", "./app/**/*"],
     "exclude": ["node_modules"]
 }
