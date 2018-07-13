@@ -75,6 +75,8 @@ class Sketch extends declared(Widget) {
 
   @property() iconClass = CSS.icons.widgetIcon;
 
+  @property() label = i18n.sketch;
+
   //----------------------------------
   //
   //  view
