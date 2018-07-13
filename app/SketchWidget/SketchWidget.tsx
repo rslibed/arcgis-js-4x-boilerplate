@@ -102,29 +102,32 @@ class Sketch extends declared(Widget) {
   })
   viewModel: CustomSketchViewModel = new CustomSketchViewModel({
     pointSymbol: {
-      type: "simple-marker",  // autocasts as new SimpleMarkerSymbol()
+      type: "simple-marker", // autocasts as new SimpleMarkerSymbol()
       style: "square",
       color: "red",
       size: "16px",
-      outline: {  // autocasts as new SimpleLineSymbol()
+      outline: {
+        // autocasts as new SimpleLineSymbol()
         color: [255, 255, 0],
         width: 3
       }
     },
     polylineSymbol: {
-      type: "simple-line",  // autocasts as new SimpleMarkerSymbol()
+      type: "simple-line", // autocasts as new SimpleMarkerSymbol()
       color: "#8A2BE2",
       width: "4",
       style: "dash"
     },
     polygonSymbol: {
-      type: "simple-fill",  // autocasts as new SimpleMarkerSymbol()
+      type: "simple-fill", // autocasts as new SimpleMarkerSymbol()
       color: "rgba(138,43,226, 0.8)",
       style: "solid",
-      outline: { // autocasts as new SimpleLineSymbol()
+      outline: {
+        // autocasts as new SimpleLineSymbol()
         color: "white",
         width: 1
       }
+    }
   });
 
   //----------------------------------
