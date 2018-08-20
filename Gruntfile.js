@@ -7,28 +7,28 @@ module.exports = function (grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'app/src/css/Main.css': 'app/src/css/Main.scss'
+                    'dist/app/css/Main.css': 'app/src/css/Main.scss'
                 }
             }
         },
         cssmin: {
             dist: {
                 files: {
-                    'app/src/css/Main.min.css': 'app/src/css/Main.css'
+                    'dist/app/css/Main.min.css': 'dist/app/css/Main.css'
                 }
             }
         },
         uglify: {
             my_target: {
                 files: {
-                    'app/src/js/Main.min.js': 'app/src/js/Main.js',
-                    'app/src/js/dojo.min.js': 'app/src/js/dojo.js'
+                    'dist/app/js/Main.min.js': 'dist/app/js/Main.js',
+                    'dist/app/js/dojo.min.js': 'dist/app/js/dojo.js'
                 }
             }
         },
         watch: {
             scripts: {
-                files: ['app/src/js/Main.js', 'app/src/dojo.js'],
+                files: ['dist/app/js/Main.js', 'dist/app/js/dojo.js'],
                 tasks: ['uglify']
             },
             sass: {
